@@ -23,9 +23,9 @@ The PoC has predefined users/roles and is using BasicAuth for authenticating req
 
 ## Endpoints
 1. Deployment 1 (Papaki)
-- GET: http://localhost:8080/api/v1/domains [retrieves list of user's domain names]
-- POST: http://localhost:8080/api/v1/domains [create new domain name]
+- GET: http://localhost:8080/api/v1/domains , Headers: Accept: application/json [retrieves list of user's domain names]
+- POST: http://localhost:8080/api/v1/domains, Headers: Accept: application/json, Content-Type: application/json, Payload: {"domain":"value.gr"} [creates new domain name]
 
 2. Deployment 2 (top.host)
-- GET: http://localhost:8081/api/v1/domains [retrieves list of user's domain names]
-- POST: http://localhost:8081/api/v1/domains [create new domain name]
+- GET: http://localhost:8081/api/v1/domains , Headers: Accept: application/json [retrieves list of user's domain names]
+- POST: http://localhost:8081/api/v1/domains, Headers: Accept: application/json, Content-Type: application/json, Payload: {"domain":"value.gr"} [creates new domain name]
