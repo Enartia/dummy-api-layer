@@ -8,6 +8,8 @@ The aim of this PoC is to demonstrate how the same service (Spring Boot API back
 
 ## Deployment
 ```
+git clone https://github.com/Enartia/dummy-api-layer.git
+cd dummy-api-layer
 mvn clean package
 mv target/dummy-api-layer-0.0.1-SNAPSHOT.jar docker/application/dummy-api-layer.jar
 cd docker
