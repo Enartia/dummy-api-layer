@@ -1,0 +1,12 @@
+spring:
+  mvc.servlet.path: "/api/v1/"
+  jpa.properties.hibernate.jdbc.lob.non_contextual_creation: true
+app:
+  #Do not alter usernames (especially when the application is deployed for tophost)
+  users:
+    - username: "user"
+      password: "user"
+      roles: "USER" #Can only retrieve domains
+    - username: "admin"
+      password: "admin"
+      roles: "ADMIN" #Can retrive & create domains

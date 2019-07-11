@@ -1,0 +1,7 @@
+app:
+  brand: papaki # papaki | tophost
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/${app.brand}
+    username: postgres
+    password: KtRYv6uRxHsd

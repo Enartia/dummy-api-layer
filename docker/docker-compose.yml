@@ -1,0 +1,37 @@
+version: '3'
+services:
+  postgres-papaki:
+    build: postgres-papaki/
+    volumes:
+      - db-papaki-data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_DB=papaki
+      - POSTGRES_PASSWORD=postgres
+  postgres-tophost:
+    build: postgres-tophost/
+    volumes:
+      - db-tophost-data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_DB=tophost
+      - POSTGRES_PASSWORD=postgres
+  app-papaki:
+    build: application/
+    environment:
+      - APP_BRAND=papaki
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-papaki/papaki
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+    ports:
+      - 8080:8080
+  app-tophost:
+    build: application/
+    environment:
+      - APP_BRAND=tophost
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-tophost/tophost
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+    ports:
+      - 8081:8080
+volumes:
+  db-papaki-data:
+  db-tophost-data:
