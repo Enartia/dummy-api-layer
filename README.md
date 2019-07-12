@@ -1,4 +1,4 @@
-# Proof of Concept (PoC): Common HTTP-based API contract supporting multiple DB schemas (deployment-specific)
+# A Spring Boot HTTP API Backend
 
 The aim of this PoC is to demonstrate how the same service (Spring Boot API back-end) can be deployed for different types of brands, which one of which has its own DB schema, while keeping the API contract the same. Besides that, focus is given on how deployment-specific implementations are loaded dynamically while keeping the same service interfacing.
 
