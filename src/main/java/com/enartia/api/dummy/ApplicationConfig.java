@@ -25,7 +25,7 @@ public class ApplicationConfig {
 	@NotBlank
 	private String brand;
 	
-//	@NotEmpty
+	@NotEmpty
 	private final List<ApplicationUser> users = new ArrayList<>();
 	
 	@Getter
